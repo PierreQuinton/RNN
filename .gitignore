@@ -2,3 +2,5 @@
 __pycache__/
 .venv/
 .python-version
+pdm.lock
+

@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "Pierre Quinton", email = "pierre.quinton@gmail.com"},
 ]
-dependencies = []
+dependencies = ["torchjd>=0.5.0"]
 requires-python = "==3.13.*"
 readme = "README.md"
 license = {text = "MIT"}
