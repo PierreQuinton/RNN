@@ -15,18 +15,20 @@ def generate_sample(seq_length, batch_size, input_size, hidden_size):
 
 if __name__ == '__main__':
     # Settings.
-    seq_length = 9
+    seq_length = 100
     batch_size = 1
     input_size = 1
-    hidden_size = 4
+    hidden_size = 99
     output_size = 1
-    train_iterations = 100
-    test_iterations = 100
+    train_iterations = 200
+    test_iterations = 10
 
     model = RNN(input_size, hidden_size, output_size)
     loss_fn = nn.MSELoss()
     optimizer = SGD(model.parameters(), lr=0.1)
     aggregator = UPGrad()
+
+    torch.manual_seed(0)
 
     # Train.
     for i in range(train_iterations):
